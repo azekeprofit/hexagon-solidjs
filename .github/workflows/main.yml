@@ -27,11 +27,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: node
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v3
       with:
           node-version: 20
     - run: corepack enable
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v3
       with:
           node-version: 20
           cache: yarn
