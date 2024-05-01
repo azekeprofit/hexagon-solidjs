@@ -26,12 +26,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Enable Corepack before setting up Node
+      run: corepack enable
     - name: node
       uses: actions/setup-node@v3
       with:
         node-version:  '18.x'
         cache: 'yarn'
-    - run: corepack enable
     - run: yarn install
     - run: yarn run build
     - name: Setup Pages
