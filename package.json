@@ -1,6 +1,6 @@
 {
   "name": "hexagon-solid",
-  "packageManager": "yarn@3.6.4",
+  "packageManager": "yarn@4.0.1",
   "scripts": {
     "build": "node ./cfg/build.js"
   },
