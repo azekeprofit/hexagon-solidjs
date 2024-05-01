@@ -27,12 +27,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: node
-      uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
-        node-version:  '18.x'
-        cache: 'yarn'
+          node-version: 20
     - run: corepack enable
-    - run: yarn install
+    - uses: actions/setup-node@v4
+      with:
+          node-version: 20
+          cache: yarn
+    - run: yarn install --immutable
     - run: yarn run build
     - name: Setup Pages
       uses: actions/configure-pages@v4
